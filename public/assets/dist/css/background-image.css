@@ -1,0 +1,48 @@
+  html, body{
+    height: 100%;
+  }
+  body { 
+        background-image: url(../../image/bg-blur.jpg) ;
+        background-position: center center;
+        background-repeat:  repeat;
+        background-attachment: fixed;
+        /*background-size:  cover;*/
+        background-color: #999;
+    
+  }
+
+  .wrapper {
+    height: 100%; 
+    width: 100%; 
+  }
+
+  .message {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%; 
+    height:45%;
+    bottom: 0; 
+    display: block;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.5em;
+  }
+  
+  .login-box-body-custom,
+  .register-box-body-custom {
+    background-color: rgba(0,0,0,0.8);
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+  }
+
+  .text-instead-box {
+    color: white;
+  }
+
+  .text-black {
+    color: black;
+  }
+
