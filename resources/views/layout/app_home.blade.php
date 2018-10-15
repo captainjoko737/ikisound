@@ -11,23 +11,23 @@
     <meta 
      name= "viewport" 
      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
-    <link rel="shortcut icon" href="{{ url('assets/image/logo.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url('public/assets/image/logo.png') }}" type="image/x-icon" />
     <title>{{ $title }} | IKISoundSystem</title>
 
-    <link rel="stylesheet" href="{{ url('assets/dist/css/AdminLTECustom.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/bower_components/fullcalendar/dist/fullcalendar.min.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/bower_components/fullcalendar/dist/fullcalendar.print.min.css') }}" media="print">
+    <link rel="stylesheet" href="{{ url('public/assets/dist/css/AdminLTECustom.css') }}">
+    <link rel="stylesheet" href="{{ url('public/assets/bower_components/fullcalendar/dist/fullcalendar.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/assets/bower_components/fullcalendar/dist/fullcalendar.print.min.css') }}" media="print">
 
-    <link rel="stylesheet" href="{{ url('assets/dist/css/loading.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/dist/css/background-image.css') }}">
+    <link rel="stylesheet" href="{{ url('public/assets/dist/css/loading.css') }}">
+    <link rel="stylesheet" href="{{ url('public/assets/dist/css/background-image.css') }}">
     <!-- Bootstrap core CSS -->
-    <link href="{{ url('assets/bower_components/bootstrap/dist/css/bootstrap-template.min.css') }}" rel="stylesheet">
+    <link href="{{ url('public/assets/bower_components/bootstrap/dist/css/bootstrap-template.min.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ url('assets/dist/css/skins/_all-skins.min.css') }}">
+    <link rel="stylesheet" href="{{ url('public/assets/dist/css/skins/_all-skins.min.css') }}">
 
     <!-- Custom styles for this template -->
-    <link href="{{ url('assets/bower_components/modern-business/modern-business.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url('assets/bower_components/font-awesome/css/font-awesome.min.css') }}">
+    <link href="{{ url('public/assets/bower_components/modern-business/modern-business.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('public/assets/bower_components/font-awesome/css/font-awesome.min.css') }}">
     @yield('css')
     
   </head>
@@ -49,19 +49,19 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ url('assets/bower_components/jquery/dist/jquery-template.min.js') }}"></script>
-    <script src="{{ url('assets/bower_components/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/jquery/dist/jquery-template.min.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     @yield('js')
-    <script src="{{ url('assets/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
-    <script src="{{ url('assets/bower_components/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ url('assets/bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/jquery-ui/jquery-ui.min.js') }}"></script>
    
-    <script src="{{ url('assets/dist/js/adminlte.min.js' ) }}"></script>
+    <script src="{{ url('public/assets/dist/js/adminlte.min.js' ) }}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="{{ url('assets/dist/js/demo.js') }}"></script>
+    <script src="{{ url('public/assets/dist/js/demo.js') }}"></script>
     <!-- fullCalendar -->
-    <script src="{{ url('assets/bower_components/moment/moment.js') }}"></script>
-    <script src="{{ url('assets/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/moment/moment.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
 
   </body>
 

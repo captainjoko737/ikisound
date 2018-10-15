@@ -18,8 +18,6 @@ class LandingPageCtrl extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-
-        // return 'GOOD';
         
         $data['title'] = 'Landing Page';
 
@@ -68,6 +66,8 @@ class LandingPageCtrl extends Controller {
 
         $data['resultPortofolio']   = $resultPortofolio;
         $data['resultPackage']      = $resultPackage;
+
+        // return $data;
 
         return view('dashboard.landingPage', $data);
     }

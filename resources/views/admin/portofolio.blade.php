@@ -125,7 +125,7 @@ var _token = $('input[name="_token"]').val();
   }
 
   function buttonEdit(id_portofolio) {
-      location.href='/admin/portofolio/edit/'+id_portofolio;
+      location.href='{{url("/admin/portofolio/edit/")}}/'+id_portofolio;
   }
 
 </script>

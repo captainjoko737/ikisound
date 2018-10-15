@@ -118,7 +118,7 @@
 				        <a href="#">{{ $value['portofolio_name'] }}</a>
 				      </h4>
 				    <!-- <a href="#"><img class="card-img-top" src="{{ url('assets/image/spect3000w.png') }}" alt=""></a> -->
-				    <img id="myImg" src="{{ url('assets/portofolio_photo').'/'.$value['portofolio_photo'] }}" alt="" width="100%" height="400">
+				    <img id="myImg" src="{{ url('public/assets/portofolio_photo').'/'.$value['portofolio_photo'] }}" alt="" width="100%" height="400">
 				    
 				      
 				      <p class="card-text">{{ $value['portofolio_description'] }}</p>

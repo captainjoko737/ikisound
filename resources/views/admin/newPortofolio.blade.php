@@ -47,7 +47,6 @@
                 {!! Form::file('image_file') !!}
               </div>
 
-             
               <div class="row">
                 
                 <div class="col-xs-4">

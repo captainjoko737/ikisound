@@ -94,7 +94,7 @@ var _token = $('input[name="_token"]').val();
   var selectedID = 0;
 
   function ButtonEdit(id_booking) {
-    window.location.href = "/admin/bookingDetail/" + id_booking;
+    window.location.href = '{{url("/admin/bookingDetail/")}}/'+id_booking;
   }
 
   function ButtonDelete(id_booking) {
@@ -123,7 +123,7 @@ var _token = $('input[name="_token"]').val();
   }
 
   function ButtonConfirmation(id_booking) {
-      window.location.href = "/admin/booking/approve/" + id_booking;
+      window.location.href = '{{url("/admin/booking/approve/")}}/' + id_booking;
   }
 
   function deleteBooking() {

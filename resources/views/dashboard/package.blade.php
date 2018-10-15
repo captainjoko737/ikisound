@@ -17,7 +17,7 @@
             
           <div class="col-md-7">
             <a href="#">
-              <img class="img-fluid rounded mb-3 mb-md-0" src="{{ url('assets/package_photo').'/'.$value['package_photo'] }}" width="100%" height="25%" alt="">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="{{ url('public/assets/package_photo').'/'.$value['package_photo'] }}" width="100%" height="25%" alt="">
             </a>
             <hr>
           </div>

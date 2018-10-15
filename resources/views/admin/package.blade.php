@@ -132,7 +132,7 @@ var _token = $('input[name="_token"]').val();
   function buttonEdit(id_package) {
       console.log(id_package);
 
-      location.href='/admin/package/edit/'+id_package;
+      location.href='{{url("/admin/package/edit/")}}/'+id_package;
   }
 
 </script>
