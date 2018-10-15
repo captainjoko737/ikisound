@@ -48,10 +48,10 @@
                 <!-- <input type="text" class="form-control" id="package_description" name="package_description" placeholder="Enter Package Description" value=""> -->
               <select class="form-control" id="status_booking" name="status_booking" style="width: 100%;">
                         <option value="">- Select Status -</option>
-                        <option value="0">WAITING</option>
-                        <option value="1">CONFIRMED</option>
-                        <option value="2">FINISHED</option>
-                        <option value="3">REJECTED</option>
+                        <option value="0" {{ $status_booking == 0 ? 'selected' : '' }}>WAITING</option>
+                        <option value="1" {{ $status_booking == 1 ? 'selected' : '' }}>CONFIRMED</option>
+                        <option value="2" {{ $status_booking == 2 ? 'selected' : '' }}>FINISHED</option>
+                        <option value="3" {{ $status_booking == 3 ? 'selected' : '' }}>REJECTED</option>
                    
               </select>
 

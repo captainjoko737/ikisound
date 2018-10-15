@@ -16,6 +16,7 @@
         <li class="{{ Request::segment(1) === 'booking' ? 'active' : '' }}" ><a href="{{ url('/admin/booking') }}"><i class="fa fa-book"></i> <span>Booking</span></a></li>
         <!-- <li class="{{ Request::segment(1) === 'project_member' ? 'active' : '' }} {{ $isSuperAdmin }}" ><a href="{{ url('/project_member') }}"><i class="fa fa-bolt"></i> <span>Inject Event</span></a></li> -->
         <li class="{{ Request::segment(1) === 'task' ? 'active' : '' }} {{ $isSuperAdmin }}" ><a href="{{ url('/admin/crewSalary') }}"><i class="fa fa-money"></i> <span>Crew Salary</span></a></li>
+        <li class="{{ Request::segment(1) === 'task' ? 'active' : '' }} {{ $isSuperAdmin }}" ><a href="{{ url('/admin/pengeluaran') }}"><i class="fa fa-money"></i> <span>Pengeluaran</span></a></li>
         <li class="{{ Request::segment(1) === 'All User' ? 'active' : '' }}" ><a href="{{ url('/admin/allUser') }}"><i class="fa fa-users"></i> <span>All User</span></a></li>
         <li class="{{ Request::segment(1) === 'All Admin' ? 'active' : '' }} {{ $isSuperAdmin }}" ><a href="{{ url('/admin/allAdmin') }}"><i class="fa fa-users"></i> <span>All Admin</span></a></li>
       </ul>

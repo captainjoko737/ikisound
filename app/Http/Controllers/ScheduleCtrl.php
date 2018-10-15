@@ -89,17 +89,17 @@ class ScheduleCtrl extends Controller
 
             if ($resultSchedule[$key]['status_booking'] == 0) {
 
-                $resultSchedule[$key]['status_booking_color'] = '#003bc0';
+                $resultSchedule[$key]['status_booking_color'] = '#C6AC04';
                 $resultSchedule[$key]['status_booking'] = 'Waiting';
 
             }else if ($resultSchedule[$key]['status_booking'] == 1) {
 
-                $resultSchedule[$key]['status_booking_color'] = '#19b804';
+                $resultSchedule[$key]['status_booking_color'] = '#001AFF';
                 $resultSchedule[$key]['status_booking'] = 'Confirmed';
 
             }else if ($resultSchedule[$key]['status_booking'] == 2) {
 
-                $resultSchedule[$key]['status_booking_color'] = '#5074f7';
+                $resultSchedule[$key]['status_booking_color'] = '#00D22A';
                 $resultSchedule[$key]['status_booking'] = 'Finished';
 
             }else if ($resultSchedule[$key]['status_booking'] == 3) {

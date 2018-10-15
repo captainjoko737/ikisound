@@ -16,9 +16,9 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div class="col-lg-4 col-xs-12">
+        <div class="col-lg-3 col-xs-12">
           <!-- small box -->
-          <div class="small-box bg-red">
+          <div class="small-box bg-blue">
             <div class="inner">
               <h4>{{ $totalSaldo }}</h4>
 
@@ -27,11 +27,26 @@
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer"></a>
+            <a href="#" class="small-box-footer">Saldo <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-12">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h4>{{ $totalPengeluaran }}</h4>
+
+              <p>Pengeluaran</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="{{ url('/admin/pengeluaran') }}" class="small-box-footer">Detail Pengeluaran <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-4 col-xs-12">
+        <div class="col-lg-3 col-xs-12">
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
@@ -42,11 +57,11 @@
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer"></a>
+            <a href="{{ url('/admin/crewSalary') }}" class="small-box-footer">Detail Crew Salary <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-4 col-xs-12">
+        <div class="col-lg-3 col-xs-12">
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
@@ -57,7 +72,7 @@
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer"></a>
+            <a href="{{ url('/admin/allUser') }}" class="small-box-footer">Detail User <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         
@@ -93,7 +108,7 @@
     var revenueChart = new FusionCharts({
         type: 'column3d',
         renderAt: 'chart-container',
-        width: '1000',
+        width: '1400',
         height: '450',
         dataFormat: 'json',
         dataSource: {

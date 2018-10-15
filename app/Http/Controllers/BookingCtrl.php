@@ -254,7 +254,7 @@ class BookingCtrl extends Controller {
         Mail::send('emails.mail', $data, function($message) {
             $message->to( 'captainjoko212@gmail.com' , 'Booking')
                     ->subject('Booking');
-            $message->from('radit@garudagames.com','IkI Sound System');
+            $message->from('support@ikisoundsystem.com','IkI Sound System');
         });
 
         $response = array(
@@ -456,9 +456,10 @@ class BookingCtrl extends Controller {
         $data['customer_offer'] = "Rp " . number_format($resultBooking['customer_offer'],2,',','.');
         $data['approved_offer'] = $resultBooking['approved_offer'];
         $data['id_booking'] = $id_booking;
+        $data['status_booking'] = $resultBooking['status_booking'];
 
         $data['success'] = 0;
-
+// return $data;
         return view('admin.approveBooking', $data);
 
     }
@@ -489,6 +490,7 @@ class BookingCtrl extends Controller {
         $data['customer_offer'] = "Rp " . number_format($resultBooking['customer_offer'],2,',','.');
         $data['approved_offer'] = $resultBooking['approved_offer'];
         $data['id_booking'] = $request['id_booking'];
+        $data['status_booking'] = $resultBooking['status_booking'];
 
         $data['success'] = 0;
 

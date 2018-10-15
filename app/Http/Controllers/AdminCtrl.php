@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\MPackage;
 use App\MBooking;
 use App\MCrewSalary;
+use App\MPengeluaran;
 use App\User;
 use Illuminate\Support\Facades\Validator;
 use Mail;
@@ -47,6 +48,20 @@ class AdminCtrl extends Controller {
 
         $data['usersRegistration'] = count($resultUser);
 
+        # GET TOTAL PENGELUARAN
+
+        $query      = MPengeluaran::query();
+        // $query      = $query->where('user_access', '>', 3);
+        $resultPengeluaran = $query->get();
+
+        $totalPengeluaran = 0;
+
+        foreach ($resultPengeluaran as $key => $value) {
+            $totalPengeluaran += $resultPengeluaran[$key]['jumlah']; 
+        }
+
+        $data['totalPengeluaran'] = "Rp " . number_format($totalPengeluaran,2,',','.');
+
         # GET TOTAL CREW PAYMENT
 
         $query      = MCrewSalary::query();
@@ -73,7 +88,7 @@ class AdminCtrl extends Controller {
             $totalSaldo += $value['approved_offer'];
         }
 
-        $totalSaldo = $totalSaldo - $totalPayment;
+        $totalSaldo = $totalSaldo - $totalPayment - $totalPengeluaran;
 
         $data['totalSaldo'] = "Rp " . number_format($totalSaldo,2,',','.');
 

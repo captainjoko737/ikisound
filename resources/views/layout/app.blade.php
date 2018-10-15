@@ -22,6 +22,7 @@
 
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="{{ url('public/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
+  <link rel="stylesheet" href="{{ url('public/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -65,7 +66,17 @@
 
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-  $.widget.bridge('uibutton', $.ui.button);
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ url('public/assets/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
@@ -81,6 +92,8 @@
 <script src="{{ url('public/assets/bower_components/moment/min/moment.min.js') }}"></script>
 <!-- Slimscroll -->
 <script src="{{ url('public/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+<script src="{{ url('public/assets/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url('public/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
 <!-- FastClick -->
 <script src="{{ url('public/assets/bower_components/fastclick/lib/fastclick.js') }}"></script>
 @yield('js')

@@ -118,7 +118,7 @@ class CrewSalaryCtrl extends Controller
         $resultBooking = $query->get();
 
         $query         = User::query();
-        $query         = $query->where('id_user', '=', 3);
+        $query         = $query->where('user_access', '=', 3);
         $resultCrew    = $query->get();
 
         $data['resultCrew']     = $resultCrew;

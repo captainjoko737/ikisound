@@ -31,34 +31,45 @@
               </div>
               <!-- /.box-header -->
               <div class="box-body" style="overflow-x:auto;">
-                <table class="table table-bordered">
-                  
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
                   <tr>
                     <th style="width: 10px">#</th>
                     <th>Package Name</th>
                     <th>Package Description</th>
                     <th>Package Price</th>
-                    <th></th>
+                    <th>Action</th>
                   </tr>
-
-                  @foreach ($resultPackage as $key => $value)
+                  </thead>
+                  <tbody>
+                      @foreach ($resultPackage as $key => $value)
                 
-                    <tr>
-                      <td>{{$key + 1}}.</td>
-                      <td>{{$value['package_name']}}.</td>
-                      <td>{{$value['package_description']}}</td>
-                      <td width="30%">{{$value['package_price']}}</td>
-                      
-                      <td>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="buttonEdit({{$value['id_package']}})">Edit</button>
-                        <button type="button" class="btn btn-danger btn-sm" onclick="ButtonDetail({{$value['id_package']}})">Delete</button>
-                      </td>
-                    </tr>
+                        <tr>
+                          <td>{{$key + 1}}.</td>
+                          <td>{{$value['package_name']}}.</td>
+                          <td>{{$value['package_description']}}</td>
+                          <td width="30%">{{$value['package_price']}}</td>
+                          
+                          <td>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="buttonEdit({{$value['id_package']}})">Edit</button>
+                            <button type="button" class="btn btn-danger btn-sm" onclick="ButtonDetail({{$value['id_package']}})">Delete</button>
+                          </td>
+                        </tr>
 
-                  @endforeach
-                  
-                  
+                      @endforeach
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Package Name</th>
+                    <th>Package Description</th>
+                    <th>Package Price</th>
+                    <th>Action</th>
+                  </tr>
+                  </tfoot>
                 </table>
+
+
               </div>
               
             </div>

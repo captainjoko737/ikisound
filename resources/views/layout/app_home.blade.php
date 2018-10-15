@@ -24,6 +24,7 @@
     <link href="{{ url('public/assets/bower_components/bootstrap/dist/css/bootstrap-template.min.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ url('public/assets/dist/css/skins/_all-skins.min.css') }}">
+    <link rel="stylesheet" href="{ url('public/assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
 
     <!-- Custom styles for this template -->
     <link href="{{ url('public/assets/bower_components/modern-business/modern-business.css') }}" rel="stylesheet">
@@ -62,6 +63,9 @@
     <!-- fullCalendar -->
     <script src="{{ url('public/assets/bower_components/moment/moment.js') }}"></script>
     <script src="{{ url('public/assets/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
+
+    <script src="{{ url('public/assets/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url('public/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
 
   </body>
 

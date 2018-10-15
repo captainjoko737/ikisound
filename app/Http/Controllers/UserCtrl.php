@@ -317,7 +317,7 @@ class UserCtrl extends Controller {
         Mail::send('emails.mail', $data, function($message) use ($emailAddress) {
             $message->to( $emailAddress , 'Forget Password')
                     ->subject('Forget Password');
-            $message->from('radit@garudagames.com','IkI Sound System');
+            $message->from('support@ikisoundsystem.com','IkI Sound System');
         });
 
     }

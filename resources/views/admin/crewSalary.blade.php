@@ -31,8 +31,8 @@
               </div>
               <!-- /.box-header -->
               <div class="box-body" style="overflow-x:auto;">
-                <table class="table table-bordered">
-                  
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
                   <tr>
                     <th style="width: 10px">#</th>
                     <th>Username</th>
@@ -43,38 +43,50 @@
                     <th>Payment Date</th>
                     <th>Salary</th>
                     <th>Status</th>
-                    
-
+                    <th>Aksi</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach ($resultCrewSalary as $key => $value)
+                
+                  <tr>
+                    <td>{{$key + 1}}.</td>
+                    <td>{{$value['username']}}</td>
+                    <td>{{$value['fullname']}}</td>
+                    <td>{{$value['booking_date']}}</td>
+                    <td>{{$value['event_name']}}</td>
+                    <td>{{$value['event_location']}}</td>
+                    <td>{{$value['payment_date']}}</td>
+                    <td>{{$value['salary']}}</td>
+                    <td>{{$value['status_salary']}}</td>
+                    <td>
+                      
+                        
+                          <button type="button" class="btn btn-danger btn-sm {{ $isSuperAdmin }}" onclick="ButtonDelete({{$value['id_crew_salary']}})"><i class="fa  fa-trash"></i></button>
+                        
+                      
+                      
+                    </td>
                   </tr>
 
-                  @foreach ($resultCrewSalary as $key => $value)
-                
-                    <tr>
-                      <td>{{$key + 1}}.</td>
-                      <td>{{$value['username']}}</td>
-                      <td>{{$value['fullname']}}</td>
-                      <td>{{$value['booking_date']}}</td>
-                      <td>{{$value['event_name']}}</td>
-                      <td>{{$value['event_location']}}</td>
-                      <td>{{$value['payment_date']}}</td>
-                      <td>{{$value['salary']}}</td>
-                      <td>{{$value['status_salary']}}</td>
-                      <td>
-                        <td>
-                            <!-- <button type="button" class="btn btn-primary btn-sm {{ $isSuperAdmin }}" onclick="buttonEdit({{$value['id_package']}})"><i class="fa  fa-pencil"></i></button> -->
-                          </td>
-                          <td>
-                            <button type="button" class="btn btn-danger btn-sm {{ $isSuperAdmin }}" onclick="ButtonDelete({{$value['id_crew_salary']}})"><i class="fa  fa-trash"></i></button>
-                          </td>
-                        
-                        
-                      </td>
-                    </tr>
-
-                  @endforeach
-                  
-                  
+                @endforeach
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Event Date</th>
+                    <th>Event Name</th>
+                    <th>Event Location</th>
+                    <th>Payment Date</th>
+                    <th>Salary</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                  </tr>
+                  </tfoot>
                 </table>
+                
               </div>
               
             </div>
@@ -159,9 +171,17 @@ var _token = $('input[name="_token"]').val();
 
 
 
-
-
-
+<!-- 
+<th style="width: 10px">#</th>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Event Date</th>
+                    <th>Event Name</th>
+                    <th>Event Location</th>
+                    <th>Payment Date</th>
+                    <th>Salary</th>
+                    <th>Status</th>
+ -->
 
 
 
