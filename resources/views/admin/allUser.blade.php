@@ -30,9 +30,10 @@
                 <a class="pull-right btn btn-success" href="{{ url('/admin/allUser/new') }}">Add New Crew</a>
               </div>
               <!-- /.box-header -->
+
               <div class="box-body" style="overflow-x:auto;">
-                <table class="table table-bordered">
-                  
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
                   <tr>
                     <th style="width: 10px">#</th>
                     <th>Username</th>
@@ -41,30 +42,47 @@
                     <th>Address</th>
                     <th>Phone</th>
                     <th>User Access</th>
-                    <th></th>
+                    <th>Aksi</th>
                   </tr>
-
-                  @foreach ($resultUser as $key => $value)
+                  </thead>
+                  <tbody>
+                    @foreach ($resultUser as $key => $value)
                 
-                    <tr>
-                      <td>{{$key + 1}}.</td>
-                      <td>{{$value['username']}}</td>
-                      <td>{{$value['fullname']}}</td>
-                      <td>{{$value['email']}}</td>
-                      <td>{{$value['address']}}</td>
-                      <td>{{$value['phone']}}</td>
-                      <td>{{$value['user_access']}}</td>
-                      <td>
-                        <!-- <button type="button" class="btn btn-primary btn-sm" onclick="buttonEdit({{$value['id_package']}})">Reset Password</button> -->
-                        <button type="button" class="btn btn-danger btn-sm {{ $isSuperAdmin }}" onclick="ButtonDelete({{$value['id_user']}})">Delete</button>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td>{{$key + 1}}.</td>
+                        <td>{{$value['username']}}</td>
+                        <td>{{$value['fullname']}}</td>
+                        <td>{{$value['email']}}</td>
+                        <td>{{$value['address']}}</td>
+                        <td>{{$value['phone']}}</td>
+                        <td>{{$value['user_access']}}</td>
+                        <td>
+                          <!-- <button type="button" class="btn btn-primary btn-sm" onclick="buttonEdit({{$value['id_package']}})">Reset Password</button> -->
+                          <button type="button" class="btn btn-danger btn-sm {{ $isSuperAdmin }}" onclick="ButtonDelete({{$value['id_user']}})">Delete</button>
+                        </td>
+                      </tr>
 
-                  @endforeach
-                  
-                  
+                    @endforeach
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>User Access</th>
+                    <th>Aksi</th>
+                  </tr>
+                  </tfoot>
                 </table>
+                
               </div>
+              
+            </div>
+
+
               
             </div>
             

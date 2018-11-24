@@ -29,34 +29,46 @@
                 <h3 class="box-title">ADMIN PORTOFOLIO</h3>
                 <a class="pull-right btn btn-success" href="{{ url('/admin/portofolio/new') }}">ADD Portofolio</a>
               </div>
-              <!-- /.box-header -->
+
               <div class="box-body" style="overflow-x:auto;">
-                <table class="table table-bordered">
-                  
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
                   <tr>
                     <th style="width: 10px">#</th>
                     <th>Portofolio Name</th>
                     <th>Portofolio Description</th>
-                    <th></th>
+                    <th>Aksi</th>
                   </tr>
-
-                  @foreach ($resultPortofolio as $key => $value)
+                  </thead>
+                  <tbody>
+                    @foreach ($resultPortofolio as $key => $value)
                 
-                    <tr>
-                      <td>{{$key + 1}}.</td>
-                      <td>{{$value['portofolio_name']}}</td>
-                      <td>{{$value['portofolio_description']}}</td>
-                      
-                      <td>
-                        <button type="button" class="btn btn-primary btn-sm" onclick="buttonEdit({{$value['id_portofolio']}})">Edit</button>
-                        <button type="button" class="btn btn-danger btn-sm" onclick="ButtonDetail({{$value['id_portofolio']}})">Delete</button>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td>{{$key + 1}}.</td>
+                        <td>{{$value['portofolio_name']}}</td>
+                        <td>{{$value['portofolio_description']}}</td>
+                        
+                        <td>
+                          <button type="button" class="btn btn-primary btn-sm" onclick="buttonEdit({{$value['id_portofolio']}})">Edit</button>
+                          <button type="button" class="btn btn-danger btn-sm" onclick="ButtonDetail({{$value['id_portofolio']}})">Delete</button>
+                        </td>
+                      </tr>
 
-                  @endforeach
-                  
+                    @endforeach
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th style="width: 10px">#</th>
+                    <th>Portofolio Name</th>
+                    <th>Portofolio Description</th>
+                    <th>Aksi</th>
+                  </tr>
+                  </tfoot>
                 </table>
+                
               </div>
+              
+            </div>
               
             </div>
             

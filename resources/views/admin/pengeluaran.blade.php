@@ -51,7 +51,7 @@
                     <td>{{ date('l, d F Y', strtotime($value['created_at'])) }}</td>
                     <td>
                       
-                          <button type="button" class="btn btn-info btn-sm" onclick="ButtonDelete({{$value['id']}})"><i class="fa  fa-pencil"></i></button>
+                          <button type="button" class="btn btn-info btn-sm" onclick="buttonEdit({{$value['id']}})"><i class="fa  fa-pencil"></i></button>
                           <button type="button" class="btn btn-danger btn-sm" onclick="ButtonDelete({{$value['id']}})"><i class="fa  fa-trash"></i></button>
                         
                     </td>
@@ -119,12 +119,12 @@ var _token = $('input[name="_token"]').val();
       console.log('INI AKAN DI HAPUS : ', selectedID);
 
       var data = {
-              "id_crew_salary" : selectedID,
+              "id" : selectedID,
               "_token" : _token};
 
         $.ajax({
            type: 'delete',
-           url: '{{url("/admin/crewSalary")}}',
+           url: '{{url("/admin/pengeluaran")}}',
            data: data,
            success: function(data) {
 
@@ -138,6 +138,10 @@ var _token = $('input[name="_token"]').val();
            }
         });
 
+  }
+
+  function buttonEdit(id) {
+      location.href='{{url("/admin/pengeluaran/edit/")}}/'+id;
   }
 
 </script>

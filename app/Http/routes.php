@@ -48,10 +48,11 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/admin/pengeluaran/new', 'PengeluaranCtrl@add');
 	Route::post('postPengeluaran',['as'=>'postPengeluaran','uses'=>'PengeluaranCtrl@create']);
 
-	Route::get('/admin/portofolio/edit/{id_portofolio}', 'PortofolioCtrl@editPortofolio');
-	Route::put('putPortofolio',['as'=>'putPortofolio','uses'=>'PortofolioCtrl@savePortofolio']);
+	Route::get('/admin/pengeluaran/edit/{id_pengeluaran}', 'PengeluaranCtrl@editPengeluaran');
+	Route::put('putPengeluaran',['as'=>'putPengeluaran','uses'=>'PengeluaranCtrl@savePengeluaran']);
 
-	Route::delete('/admin/portofolio', 'PortofolioCtrl@deletePortofolio');
+	Route::delete('/admin/pengeluaran', 'PengeluaranCtrl@deletePengeluaran');
+	
 
 # A L L  U S E R
 
