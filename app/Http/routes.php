@@ -45,8 +45,8 @@ Route::group(['middleware' => 'auth'], function(){
 # P E N G E L U A R A N
 
 	Route::get('/admin/pengeluaran', 'PengeluaranCtrl@index');
-	Route::get('/admin/pengeluaran/new', 'PortofolioCtrl@newPortofolio');
-	Route::post('postNewPortofolio',['as'=>'postNewPortofolio','uses'=>'PortofolioCtrl@createNewPortofolio']);
+	Route::get('/admin/pengeluaran/new', 'PengeluaranCtrl@add');
+	Route::post('postPengeluaran',['as'=>'postPengeluaran','uses'=>'PengeluaranCtrl@create']);
 
 	Route::get('/admin/portofolio/edit/{id_portofolio}', 'PortofolioCtrl@editPortofolio');
 	Route::put('putPortofolio',['as'=>'putPortofolio','uses'=>'PortofolioCtrl@savePortofolio']);

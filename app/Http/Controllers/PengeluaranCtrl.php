@@ -39,42 +39,20 @@ class PengeluaranCtrl extends Controller
         $query  = MPengeluaran::query();
         $result = $query->get();
 
+        $total = 0;
+        foreach ($result as $key => $value) {
+            $total += $value['jumlah'];
+        }
+
+        $data['total'] = $total;
         $data['result'] = $result;
 // return $data;
         return view('admin.pengeluaran', $data);
     }
 
-    public function adminPortofolio() {
+    public function add() {
 
-        $data['title'] = 'Admin Portofolio';
-
-        $user = Auth::user();
-
-        if ($user->user_access != 1 && $user->user_access != 2) {
-            return redirect('/');
-        }
-
-        if ($user->user_access == 2) {
-            # is Admin
-            $data['isSuperAdmin'] = 'hidden';
-        }else if ($user->user_access == 1) {
-            # is Super Admin
-            $data['isSuperAdmin'] = 'show';
-            
-        }
-
-        $query              = MPortofolio::query();
-        // $query              = $query->where('user_access', '=', 2);
-        $resultPortofolio   = $query->get();
-
-        $data['resultPortofolio'] = $resultPortofolio;
-
-        return view('admin.portofolio', $data);
-    }
-
-    public function newPortofolio() {
-
-        $data['title'] = 'New Portofolio';
+        $data['title'] = 'Pengeluaran';
 
         $user = Auth::user();
 
@@ -93,7 +71,33 @@ class PengeluaranCtrl extends Controller
 
         $data['success'] = 0;
 
-        return view('admin.newPortofolio', $data);
+        return view('admin.addPengeluaran', $data);
+    }
+
+    public function create(request $request) {
+
+        $data['title'] = 'Pengeluaran';
+
+        $user = Auth::user();
+
+        if ($user->user_access != 1 && $user->user_access != 2) {
+            return redirect('/');
+        }
+
+        if ($user->user_access == 2) {
+            # is Admin
+            $data['isSuperAdmin'] = 'hidden';
+        }else if ($user->user_access == 1) {
+            # is Super Admin
+            $data['isSuperAdmin'] = 'show';
+            
+        }
+
+        $data['success'] = 1;
+
+        $new_pengeluaran = MPengeluaran::create($request->all());
+
+        return view('admin.addPengeluaran', $data);
     }
 
     public function createNewPortofolio(request $request) {

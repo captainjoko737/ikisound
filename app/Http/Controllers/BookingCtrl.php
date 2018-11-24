@@ -249,10 +249,10 @@ class BookingCtrl extends Controller {
             return 0;
         }
 
-        $data = array('name'=> 'rabit', "body" => "You have 1 new booking event");
+        $data = array('name'=> 'IkI Sound System', "body" => "You have 1 new booking event");
    
         Mail::send('emails.mail', $data, function($message) {
-            $message->to( 'captainjoko212@gmail.com' , 'Booking')
+            $message->to( 'ikisoundsystem@yahoo.com' , 'Booking')
                     ->subject('Booking');
             $message->from('support@ikisoundsystem.com','IkI Sound System');
         });
@@ -535,12 +535,12 @@ class BookingCtrl extends Controller {
             // return $resultUser['email'];
             $emailAddress = $resultUser['email'];
 
-            $dataEmail = array('name'=> $resultUser['fullname'], "body" => "Your Booking Status is : ".$status_booking."");
+            $dataEmail = array('name'=> $resultUser['fullname'], "body" => "Your Booking Status is : ".$status_booking.". thank you for using iki sound system booking online");
        
             Mail::send('emails.mail', $dataEmail, function($message) use ($emailAddress) {
-                $message->to( $emailAddress , 'Your Booking Status has Changed')
-                        ->subject('Your Booking Status has Changed');
-                $message->from('radit@garudagames.com','IkI Sound System');
+                $message->to( $emailAddress , 'Your Booking Status has been Changed')
+                        ->subject('Your Booking Status has been Changed');
+                $message->from('support@ikisoundsystem.com','IkI Sound System');
             });
         }
 

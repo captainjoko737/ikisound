@@ -26,8 +26,8 @@
           <div class="col-md-12">
             <div class="box">
               <div class="box-header with-border">
-                <h3 class="box-title">Pengeluaran</h3>
-                <a class="pull-right btn btn-success" href="{{ url('/admin/crewSalary/paid') }}">Tambah</a>
+                <h3 class="box-title pull-left">Total Pengeluaran : Rp. {{ number_format($total, 2) }}</h3>
+                <a class="pull-right btn btn-success" href="{{ url('/admin/pengeluaran/new') }}">Tambah</a>
               </div>
               <!-- /.box-header -->
               <div class="box-body" style="overflow-x:auto;">
